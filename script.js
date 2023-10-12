@@ -107,7 +107,7 @@ function getCoordinates() {
       console.log(latitude,longitude)
       // Now that you have the coordinates, you can fetch weather data from the OpenWeather API.
 
-      const REVERSE_URL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&units=metric&limit=1&appid=${api_key}`;
+      const REVERSE_URL = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&units=metric&limit=1&appid=${api_key}`;
        fetch(REVERSE_URL).then(response =>response.json()).then(data =>{
         const {name, country} = data[0]
         console.log(data);
@@ -193,7 +193,7 @@ const createWeatherCard =(name,country,element,index)=>{
 }
 //-------------------------------------------function to get weather data
 const getWeatherData =  (name,country,lat,lon)=>{
-    const weatherURL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${api_key}`
+    const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${api_key}`
     
      fetch(weatherURL).then(res=>res.json()).then(data=>{
          //filter only one fore cast day
@@ -238,7 +238,7 @@ const getWeatherData =  (name,country,lat,lon)=>{
 const getCoordinateName = async ()=>{
      try {
         const cityName = search.value.trim();
-        const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&units=metric&limit=1&appid=${api_key}`;
+        const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&units=metric&limit=1&appid=${api_key}`;
 
         if(!cityName) return; // chack if there is no city name provided
         const response = await fetch(geoUrl) ;
