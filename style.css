@@ -6,6 +6,7 @@ body{
     max-height: 100vh;
     
 }
+
 .app{
     display: flex;
     flex-direction: row;
@@ -275,9 +276,7 @@ body{
     color: white;
     font-weight: bold;
 }
-.location-btn{
-    
-}
+
 
 @media (max-width:768px) {
   

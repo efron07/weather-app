@@ -98,6 +98,8 @@ function getCurrentTimeWithoutSeconds() {
  }
 
 //-------------------------------------function to get current coordinates
+
+
 function getCoordinates() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -105,7 +107,6 @@ function getCoordinates() {
       const {latitude,longitude} = position.coords;
       
       console.log(latitude,longitude)
-      // Now that you have the coordinates, you can fetch weather data from the OpenWeather API.
 
       const REVERSE_URL = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&units=metric&limit=1&appid=${api_key}`;
        fetch(REVERSE_URL).then(response =>response.json()).then(data =>{
@@ -263,10 +264,6 @@ const getCoordinateName = async ()=>{
 searchBtn.addEventListener('click',getCoordinateName);
 
 
-
-    
-
-
 //--------------------------------------------getting hourly data
 async function fetchHourlyTemperatureData(name,country,lat,lon) {
   const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${api_key}`;
@@ -287,49 +284,7 @@ async function fetchHourlyTemperatureData(name,country,lat,lon) {
    }
 }
 
-
-
-
-
-
-
-
-
-
-
 // ------------------------------------------chart for line and graph
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 let myChart;
