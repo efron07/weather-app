@@ -21,7 +21,8 @@
          <div class="sun-icon">
             <p class="time-text">Tuesday, 12:45</p>
              <img src="/img/Icon feather-sun.svg" alt="sun-icon">
-             <p class="sun-plus"><span class="text-sun-big">26 C°</span></p>
+             <p ><span class="text-sun-big">26<span id="unit" class="text-sun-big">C°</span></span></p>
+             <p class="weather-description"></p>
          </div>
          
          <div class="today-data">
@@ -36,15 +37,15 @@
             <div class="rain-chance">
                 <p class="p-text">Humidity</p>
                 <div class="rain-icon-text">
-                    <img class="rain-icon" src="img/water-drop.png" alt="">
+                    <img class="humidity-icon" src="img/humidity.png" alt="">
                     <p class="p-text">12%</p>
                 </div>
             
             </div>
             <div class="rain-chance">
                 <p class="p-text">Pressure</p>
-                <div class="rain-icon-text">
-                    <img class="rain-icon" src="img/Icon metro-rainy.svg" alt="">
+                <div class="rain-icon-text pressure">
+                    <img class="pressure-icon" src="img/pressure.png" alt="">
                     <p class="p-text">12%</p>
                 </div>
             
@@ -58,7 +59,7 @@
                 <div class="search-input">
                     <input class="input-search" type="text" placeholder="search by location">
                     <button class="toggle-button search ">Search</button>
-                    <img src="/img/Icon material-my-location.svg" alt="my-location">
+                    <img src="/img/Icon material-my-location.svg" alt="my-location" class="locationBtn">
                 </div>
                 <button class="toggle-button" id="unit-toggle">Celsius</button>
             </div>
@@ -84,7 +85,7 @@
                 <div class="card">
                     <div class="card-title">
                         <p class="p-text day">Sunday</p>
-                        <p class="p-text date">03 sep 23</p>
+                        <p class="p-text date">sep 23</p>
                     </div>
                     <div class="card-details">
                         <img src="/img/Icon awesome-cloud-sun-rain.svg" alt="">
@@ -96,7 +97,7 @@
                 <div class="card">
                     <div class="card-title">
                         <p class="p-text day">Sunday</p>
-                        <p class="p-text date">03 sep 23</p>
+                        <p class="p-text date">sep 23</p>
                     </div>
                     <div class="card-details">
                         <img src="/img/Icon awesome-cloud-sun-rain.svg" alt="">
@@ -108,7 +109,7 @@
                 <div class="card">
                     <div class="card-title">
                         <p class="p-text day">Monday</p>
-                        <p class="p-text date">03 sep 23</p>
+                        <p class="p-text date">sep 23</p>
                     </div>
                     <div class="card-details">
                         <img src="/img/Icon awesome-cloud-sun-rain.svg" alt="">
@@ -120,7 +121,7 @@
                 <div class="card">
                     <div class="card-title">
                         <p class="p-text day">Tuesday</p>
-                        <p class="p-text date">03 sep 23</p>
+                        <p class="p-text date">sep 23</p>
                     </div>
                     <div class="card-details">
                         <img src="/img/Icon awesome-cloud-sun-rain.svg" alt="">
@@ -132,7 +133,7 @@
                 <div class="card">
                     <div class="card-title">
                         <p class="p-text day">Thursday</p>
-                        <p class="p-text date">03 sep 23</p>
+                        <p class="p-text date">sep 23</p>
                     </div>
                     <div class="card-details">
                         <img src="/img/Icon awesome-cloud-sun-rain.svg" alt="">
@@ -147,6 +148,6 @@
    </div>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script defer src="script.js"></script>
+    <script defer type="module" src="script.js"></script>
 </body>
 </html>

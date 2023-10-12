@@ -14,7 +14,7 @@ body{
 .side1{
     width: 25%;
     max-height: 100vh;
-    background-color:#F1F1F1;
+    background: linear-gradient(180deg, rgba(208,207,230,1) 0%, rgba(214,214,214,1) 7%, rgba(30,143,242,1) 42%);
     position: fixed;
     padding-bottom: 4rem;
     border-radius: 2rem;
@@ -36,19 +36,19 @@ body{
     font-family: "roboto" sans-serif;
     font-size: 16px;
     font-weight: 500;
+    color: white;
 
 }
+.sun-icon img{
+    width: 200px;
+    height: 150px;
+}
 .text-sun-big{
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 500;
     color: #FA9E02;
 }
-.sun-plus{
-    font-size: 25px;
-    font-weight: 500;
-    color: #FA9E02;
-    font-weight: bold;
-}
+
 .today-data{
     display: flex;
     justify-content: space-between;
@@ -76,16 +76,48 @@ body{
     
   
 }
+.weather-description{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
 .rain-icon-text{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    margin-right: 1rem;
+   
+}
+.pressure{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+   
+}
+.humidity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
+   
 }
 .rain-icon{
-    
-    width: 2rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+   
 }
+.humidity-icon{
+    width: 1.5rem;
+    margin-right: 0.5rem;
+ 
+}
+.pressure-icon{
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  
+}
+
 .p-text{
   font-family: "roboto" sans-serif;
     font-size: 16px;
@@ -95,6 +127,7 @@ body{
 .loc-title{
     font-size: 16px;
     font-weight: bold;
+    color: white;
 }
 
 
@@ -226,7 +259,7 @@ input:checked + label:after{
     width: 443px;
     height: 350px;
     color: blue;
-    margin-left: 4rem;
+    margin-left: 2rem;
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -239,7 +272,7 @@ input:checked + label:after{
 .bar-graph{
     width: 648px;
     height: 327px;
-    margin-right: 4rem;
+    margin-right: 2rem;
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -264,7 +297,7 @@ input:checked + label:after{
     align-items: center;
 }
 .card{
-    background-color: #1E8FF2;
+   background: linear-gradient(180deg, rgba(208,207,230,1) 0%, rgba(214,214,214,1) 7%, rgba(30,143,242,1) 42%);
     width: 900px;
     height: 250px;
     margin-left: 4rem;
@@ -313,5 +346,9 @@ input:checked + label:after{
     font-weight: bold;
 }
 .location-btn{
+    
+}
+
+@media (max-width:1400px) {
     
 }
