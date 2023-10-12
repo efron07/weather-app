@@ -4,13 +4,17 @@ body{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     max-height: 100vh;
-    overflow-x: hidden;  
+    
 }
 .app{
     display: flex;
     flex-direction: row;
 }
-
+.container{
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
 .side1{
     width: 25%;
     max-height: 100vh;
@@ -129,30 +133,7 @@ body{
     font-weight: bold;
     color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ------------------------------------------ */
 .main-side
 {
     width: 75%;
@@ -165,56 +146,6 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-
-
-/* label{
-    width: 500px;
-    height: 200px;
-    position: relative;
-    display: block;
-    background:#F1F1F1;
-    border-radius: 200px;
-    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),inset 0px 5px 15px rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: 0.3s;
-}
-label:after{
-    content: "";
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: linear-gradient(180deg,#ffcc89,#d8860b);
-    border-radius: 180px;
-    box-shadow:  0px 5px 15px rgba(0, 0, 0, 0.4);
-      transition: 0.3s;
-}
-.toggle-button{
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
-input:checked + label{
-    background-color: #1E8FF2;
-   
-}
-input:checked + label:after{
-    left: 490px;
-    transform: translateX(-100%);
-    background: linear-gradient(180deg,#777,#3a3a3a);
-} */
-
-
-
-
-
-
-
-
-
-
-
 
 .search{
     margin-left: 1rem;
@@ -254,12 +185,13 @@ input:checked + label:after{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    gap: 1rem;
 }
 .line-graph{
     width: 443px;
     height: 350px;
     color: blue;
-    margin-left: 2rem;
+   
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -272,7 +204,7 @@ input:checked + label:after{
 .bar-graph{
     width: 648px;
     height: 327px;
-    margin-right: 2rem;
+   
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -349,6 +281,98 @@ input:checked + label:after{
     
 }
 
-@media (max-width:1400px) {
-    
+@media (max-width:768px) {
+    .app{
+       flex-direction: column;
+       
+    }
+     .main-side{
+        top: 700px;
+     }
+     .sun-icon img{
+    width: 100px;
+    height: 100px;
+   }
+    .side1{
+        width: 80%;
+        max-height: 600px;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+    }
+    .graph{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    .line-graph{
+        width: 400px;
+        height: 200px;
+        margin-left: 0rem;
+        margin: 1rem;
+        padding: 2rem;
+        
+    }
+    .bar-graph{
+        width: 420px;
+        height: 327;
+        padding: 1rem;
+        margin-left: 1rem;
+       
+    }
+ .nav{
+    display: none;
+ }
+
+    .cards{
+        display: grid;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-left: rem;
+       
+    }
+    .card{
+    width: 200px;
+    height: 250px;
+    margin-left: 0rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+     padding-bottom: 2rem;
+     margin-bottom: 1rem;
+    }
+}
+
+
+/* Add media query for laptops and larger screens */
+@media (max-width: 1024px) {
+  .side1 {
+    width: 25%; /* Restore the original sidebar width */
+    max-height: 100vh;
+    position: fixed;
+    border-radius: 2rem;
+  }
+
+  .main-side {
+    left: 25%; /* Restore the left position */
+    top: 0; /* Reset the top position */
+  }
+
+  .nav {
+    display: flex; /* Restore the navigation display */
+  }
+
+  .cards {
+    display: flex;
+    grid-template-columns: auto; /* Reset the grid layout */
+    margin-left: 4rem; /* Restore the margin */
+  }
+
+  .card {
+    width: 900px; /* Restore the card width */
+    margin-left: 4rem;
+  }
 }
