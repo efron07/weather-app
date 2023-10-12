@@ -19,7 +19,6 @@ body{
     width: 25%;
     max-height: 100vh;
     background: linear-gradient(180deg, rgba(208,207,230,1) 0%, rgba(214,214,214,1) 7%, rgba(30,143,242,1) 42%);
-    position: fixed;
     padding-bottom: 4rem;
     border-radius: 2rem;
 }
@@ -138,8 +137,7 @@ body{
 {
     width: 75%;
     height: 100vh;
-    position: relative;
-    left: 25%;
+   
 }
 .nav{
     display: flex;
@@ -282,97 +280,85 @@ body{
 }
 
 @media (max-width:768px) {
-    .app{
-       flex-direction: column;
+  
+     .app{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
        
-    }
-     .main-side{
-        top: 700px;
      }
-     .sun-icon img{
-    width: 100px;
-    height: 100px;
-   }
-    .side1{
-        width: 80%;
-        max-height: 600px;
-        position: absolute;
-        align-items: center;
-        justify-content: center;
-    }
-    .graph{
-        display: grid;
-        align-items: center;
-        justify-content: center;
-    }
-    .line-graph{
-        width: 400px;
-        height: 200px;
-        margin-left: 0rem;
-        margin: 1rem;
-        padding: 2rem;
+     .side1{
+        width: 100%;
+      
         
-    }
-    .bar-graph{
-        width: 420px;
-        height: 327;
+     }
+     .input-search{
+         width: 15rem;
+        
+        border-radius: 0.5rem;
+        border-color: #1e8ff2;
+        padding: 0.7rem;
+        outline: none;
+        color:black;
+
+     }
+     .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+     }
+     
+     
+     .card{
+       
+        width: 600px;
+        height: 250px;
+        margin-left: 2rem;
         padding: 1rem;
-        margin-left: 1rem;
-       
-    }
- .nav{
-    display: none;
- }
-
-    .cards{
-        display: grid;
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        grid-gap: 10px;
-        justify-content: center;
+        border-radius: 1rem;
+        color: white;
+        padding-bottom: 2rem;
+     }
+     .rain-chance{
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        margin-left: rem;
-       
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        background-color: white;
+        border-radius: 1rem;
+        margin: 0.3rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 80%;
+        margin-left: 2rem;
+     }  
+     .graph{
+        max-width: 100%;
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+     }
+
+     .line-graph{
+        width: 600px;
+     }
+     .bar-graph{
+        width: 600px;
+     }
+     .main-side{
+        width: 100%;
+        position: relative;
+     }
     }
-    .card{
-    width: 200px;
-    height: 250px;
-    margin-left: 0rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    color: white;
-     padding-bottom: 2rem;
-     margin-bottom: 1rem;
+
+    @media (min-width:775px){
+           .side1{
+            width: 40%;
+           }
     }
-}
 
-
-/* Add media query for laptops and larger screens */
-@media (max-width: 1024px) {
-  .side1 {
-    width: 25%; /* Restore the original sidebar width */
-    max-height: 100vh;
-    position: fixed;
-    border-radius: 2rem;
-  }
-
-  .main-side {
-    left: 25%; /* Restore the left position */
-    top: 0; /* Reset the top position */
-  }
-
-  .nav {
-    display: flex; /* Restore the navigation display */
-  }
-
-  .cards {
-    display: flex;
-    grid-template-columns: auto; /* Reset the grid layout */
-    margin-left: 4rem; /* Restore the margin */
-  }
-
-  .card {
-    width: 900px; /* Restore the card width */
-    margin-left: 4rem;
-  }
-}
